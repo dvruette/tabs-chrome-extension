@@ -1,0 +1,117 @@
+
+
+#preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 5;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+#preview .container {
+    width: 100%;
+    padding: 8px 12px;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+#preview .container::-webkit-scrollbar {
+    display: none;
+}
+#preview::before {
+    content: "";
+    display: static;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+}
+
+#preview .title {
+    white-space: nowrap;
+    margin-bottom: 2px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#preview .subtitle {
+    white-space: nowrap;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+.tab-group {
+    width: 100%;
+    position: relative;
+    padding: 12px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tab-group .edit-title {
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.tab-group .edit-title input {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    border-radius: 2px;
+}
+
+.tab-group .edit-title input:focus {
+    box-shadow: 0 0 2px 2px rgba(92, 173, 123, 0.7);
+}
+
+.tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+}
+
+.tab-list > div {
+    /* box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.2); */
+    background: white;
+    margin: 0 8px 8px 0;
+    overflow: none;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .1s ease;
+}
+
+.tab-list > div:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+.tab-list > div.active {
+    background-color: rgb(220, 243, 233);
+    border-color:rgb(92, 173, 103);
+    cursor: default;
+}
+
+.tab-list > div.dragging {
+    opacity: 0.5;
+}
+
+.tab-list > div > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
